@@ -1,0 +1,14 @@
+extends layout
+
+block content
+ h1= title
+ p Welcome to #{title}
+ form(name="calculator", action="/calculate", method="post")
+  input(type="number", name="num1" placeholder="0")
+  br
+  input(type="number", name="num2" placeholder="0")
+  br
+  input(type="submit", value="add")
+  input(type="submit", value="subtract")
+  input(type="submit", value="multiply")
+  input(type="submit", value="divide")

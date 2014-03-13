@@ -1,0 +1,56 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', '-g', 'nodemon' ]
+2 info using npm@1.4.3
+3 info using node@v0.10.26
+4 verbose node symlink /usr/bin/node
+5 verbose cache add [ 'nodemon', null ]
+6 verbose cache add name=undefined spec="nodemon" args=["nodemon",null]
+7 verbose parsed url { protocol: null,
+7 verbose parsed url   slashes: null,
+7 verbose parsed url   auth: null,
+7 verbose parsed url   host: null,
+7 verbose parsed url   port: null,
+7 verbose parsed url   hostname: null,
+7 verbose parsed url   hash: null,
+7 verbose parsed url   search: null,
+7 verbose parsed url   query: null,
+7 verbose parsed url   pathname: 'nodemon',
+7 verbose parsed url   path: 'nodemon',
+7 verbose parsed url   href: 'nodemon' }
+8 silly lockFile 1625b929-nodemon nodemon
+9 verbose lock nodemon /home/anish/.npm/1625b929-nodemon.lock
+10 silly lockFile 1625b929-nodemon nodemon
+11 silly lockFile 1625b929-nodemon nodemon
+12 verbose addNamed [ 'nodemon', '' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile 4f5e51c6-nodemon nodemon@
+15 verbose lock nodemon@ /home/anish/.npm/4f5e51c6-nodemon.lock
+16 silly addNameRange { name: 'nodemon', range: '*', hasData: false }
+17 verbose url raw nodemon
+18 verbose url resolving [ 'https://registry.npmjs.org/', './nodemon' ]
+19 verbose url resolved https://registry.npmjs.org/nodemon
+20 info trying registry request attempt 1 at 12:30:47
+21 http GET https://registry.npmjs.org/nodemon
+22 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+23 info trying registry request attempt 2 at 12:30:57
+24 http GET https://registry.npmjs.org/nodemon
+25 info retry will retry, error on last attempt: Error: getaddrinfo EADDRINFO
+26 info trying registry request attempt 3 at 12:31:57
+27 http GET https://registry.npmjs.org/nodemon
+28 silly lockFile 4f5e51c6-nodemon nodemon@
+29 silly lockFile 4f5e51c6-nodemon nodemon@
+30 error Error: getaddrinfo EADDRINFO
+30 error     at errnoException (dns.js:37:11)
+30 error     at Object.onanswer [as oncomplete] (dns.js:124:16)
+31 error If you need help, you may report this *entire* log,
+31 error including the npm and node versions, at:
+31 error     <http://github.com/npm/npm/issues>
+32 error System Linux 3.8.0-36-generic
+33 error command "/usr/bin/node" "/usr/bin/npm" "install" "-g" "nodemon"
+34 error cwd /home/anish/calc
+35 error node -v v0.10.26
+36 error npm -v 1.4.3
+37 error syscall getaddrinfo
+38 error code EADDRINFO
+39 error errno EADDRINFO
+40 verbose exit [ 1, true ]
