@@ -1,7 +1,7 @@
+// Back-end tests
 var expect = require("chai").expect;
 var tags = require("../lib/calc.js");
 
-// Passing Tests
 describe("Calc", function(){
 	
 describe("#addition()", function(){
@@ -65,8 +65,5 @@ describe("#division()", function(){
 		expect(quotient).to.be.below(0);
 	});
 });
-
-
-
 
 });

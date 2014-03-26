@@ -1,0 +1,45 @@
+<html>
+<head>
+<link rel="stylesheet" href="./public/stylesheets/qunit.css">
+</head>
+
+<body>
+<form name="calculate">
+<table border="4">
+<tbody>
+<tr>
+<tr>
+<td>
+<input type="button" onclick="calculate.input.value += '1'" value=" 1 " name="one">
+<input type="button" onclick="calculate.input.value += '2'" value=" 2 " name="two">
+<input type="button" onclick="calculate.input.value += '3'" value=" 3 " name="three">
+<input type="button" onclick="calculate.input.value += ' + '" value=" + " name="plus">
+<br>
+<input type="button" onclick="calculate.input.value += '4'" value=" 4 " name="four">
+<input type="button" onclick="calculate.input.value += '5'" value=" 5 " name="five">
+<input type="button" onclick="calculate.input.value += '6'" value=" 6 " name="six">
+<input type="button" onclick="calculate.input.value += ' - '" value=" - " name="minus">
+<br>
+<input type="button" onclick="calculate.input.value += '7'" value=" 7 " name="seven">
+<input type="button" onclick="calculate.input.value += '8'" value=" 8 " name="eight">
+<input type="button" onclick="calculate.input.value += '9'" value=" 9 " name="nine">
+<input type="button" onclick="calculate.input.value += ' * '" value=" x " name="times">
+<br>
+<input type="button" onclick="calculate.input.value = ''" value=" c " name="clear">
+<input type="button" onclick="calculate.input.value += '0'" value=" 0 " name="zero">
+<input type="button" onclick="calculate.input.value = eval(calculate.input.value)" value=" = " name="DoIt">
+<input type="button" onclick="calculate.input.value += ' / '" value=" / " name="div">
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="./public/javascripts/qunit.js"></script>
+<script src="./test/qCalculator.js"></script>
+</body>
+</html>

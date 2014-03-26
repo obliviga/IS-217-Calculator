@@ -1,33 +1,40 @@
-extends layout
-
-block content
- h1= title
- p Welcome to #{title}
- form(name='Calc')
-    table(border='4')
-        tr
-          td
-            input(type='text', name='input', size='16')
-            br
-        tr
-          td
-            input(type='button', name='one', value='  1  ', onclick='Calc.input.value += \'1\'')
-            input(type='button', name='two', value='  2  ', onclick='Calc.input.value += \'2\'')
-            input(type='button', name='three', value='  3  ', onclick='Calc.input.value += \'3\'')
-            input(type='button', name='plus', value='  +  ', onclick='Calc.input.value += \' + \'')
-            br
-            input(type='button', name='four', value='  4  ', onclick='Calc.input.value += \'4\'')
-            input(type='button', name='five', value='  5  ', onclick='Calc.input.value += \'5\'')
-            input(type='button', name='six', value='  6  ', onclick='Calc.input.value += \'6\'')
-            input(type='button', name='minus', value='  -  ', onclick='Calc.input.value += \' - \'')
-            br
-            input(type='button', name='seven', value='  7  ', onclick='Calc.input.value += \'7\'')
-            input(type='button', name='eight', value='  8  ', onclick='Calc.input.value += \'8\'')
-            input(type='button', name='nine', value='  9  ', onclick='Calc.input.value += \'9\'')
-            input(type='button', name='times', value='  x  ', onclick='Calc.input.value += \' * \'')
-            br
-            input(type='button', name='clear', value='  c  ', onclick='Calc.input.value = \'\'')
-            input(type='button', name='zero', value='  0  ', onclick='Calc.input.value += \'0\'')
-            input(type='button', name='DoIt', value='  =  ', onclick='Calc.input.value = eval(Calc.input.value)')
-            input(type='button', name='div', value='  /  ', onclick='Calc.input.value += \' / \'')
-            br
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/qunit.css')
+  body
+    h1 Express
+    p Welcome to Express
+    form(name='calculate')
+      table(border='14')
+        tbody
+          tr
+            td
+              input(type='text', size='16', name='input')
+              br
+          tr
+            td
+              input(type='button', onclick='calculate.input.value += \'1\'', value=' 1 ', name='one')
+              input(type='button', onclick='calculate.input.value += \'2\'', value=' 2 ', name='two')
+              input(type='button', onclick='calculate.input.value += \'3\'', value=' 3 ', name='three')
+              input(type='button', onclick='calculate.input.value += \' + \'', value=' + ', name='plus')
+              br
+              input(type='button', onclick='calculate.input.value += \'4\'', value=' 4 ', name='four')
+              input(type='button', onclick='calculate.input.value += \'5\'', value=' 5 ', name='five')
+              input(type='button', onclick='calculate.input.value += \'6\'', value=' 6 ', name='six')
+              input(type='button', onclick='calculate.input.value += \' - \'', value=' - ', name='minus')
+              br
+              input(type='button', onclick='calculate.input.value += \'7\'', value=' 7 ', name='seven')
+              input(type='button', onclick='calculate.input.value += \'8\'', value=' 8 ', name='eight')
+              input(type='button', onclick='calculate.input.value += \'9\'', value=' 9 ', name='nine')
+              input(type='button', onclick='calculate.input.value += \' * \'', value=' x ', name='times')
+              br
+              input(type='button', onclick='calculate.input.value = \'\'', value=' ac ', name='clear')
+              input(type='button', onclick='calculate.input.value += \'0\'', value=' 0 ', name='zero')
+              input(type='button', onclick='calculate.input.value = eval(calculate.input.value)', value=' = ', name='name')
+              input(type='button', onclick='calculate.input.value += \' / \'', value=' / ', name='div')
+              br
+    #qunit
+    #qunit-fixture
+    script(src='./javascripts/qunit.js')
+    script(src='./javascripts/qCalculator.js')
